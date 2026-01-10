@@ -1,161 +1,43 @@
-# Katleho Mokoena - Career Portfolio Website
+# Katleho Magnolia Mokoena — Multidisciplinary Technologist Portfolio
 
-A modern, responsive portfolio website showcasing skills and experience in Software Development, Application Support Engineering, and Data Analysis.
+Welcome to my professional portfolio — a modular showcase of my work across **electrical engineering**, **data analytics**, and **solution-focused software development**. This site reflects my commitment to clarity, traceability, and empowerment through technology.
 
-## 🌐 Live Website
+## 🚀 About Me
 
-Once deployed to GitHub Pages, your website will be available at:
-`https://[your-username].github.io/[repository-name]/`
+I'm a systems architect and deployment strategist with a passion for building end-to-end solutions that integrate engineering, software, and data. I specialize in:
 
-## 📁 Project Structure
+- Modular, event-driven software architecture
+- Device integration and live data communication
+- Strategic financial modeling and document reconciliation
+- Technical project management and operational optimization
+- Clear, professional communication across business and technical domains
 
-```
-Career Website/
-│
-├── index.html          # Main HTML file
-├── styles.css          # All styling and responsive design
-├── script.js           # Interactive features and animations
-└── README.md           # This file
-```
+## 🧩 What This Site Demonstrates
 
-## 🚀 How to Host on GitHub Pages
+This portfolio is built to reflect:
 
-Follow these step-by-step instructions to get your website live:
-
-### Step 1: Create a GitHub Account (if you don't have one)
-1. Go to [github.com](https://github.com)
-2. Sign up for a free account
-3. Verify your email address
-
-### Step 2: Create a New Repository
-1. Click the **"+"** icon in the top right corner
-2. Select **"New repository"**
-3. Name your repository (e.g., `career-portfolio` or `katleho-mokoena-portfolio`)
-4. Make it **Public** (required for free GitHub Pages)
-5. **DO NOT** initialize with README, .gitignore, or license (we already have files)
-6. Click **"Create repository"**
-
-### Step 3: Initialize Git in Your Project Folder
-
-Open your terminal/command prompt in the project folder and run:
-
-```bash
-# Initialize git repository
-git init
-
-# Add all files
-git add .
-
-# Create your first commit
-git commit -m "Initial commit: Career portfolio website"
-```
-
-### Step 4: Connect to GitHub and Push Files
-
-```bash
-# Add your GitHub repository as remote (replace with your actual repository URL)
-git remote add origin https://github.com/[your-username]/[repository-name].git
-
-# Push your files to GitHub
-git branch -M main
-git push -u origin main
-```
-
-**Note:** You'll be prompted to enter your GitHub username and password (or personal access token).
-
-### Step 5: Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click on **"Settings"** (top menu)
-3. Scroll down to **"Pages"** in the left sidebar
-4. Under **"Source"**, select **"Deploy from a branch"**
-5. Choose **"main"** branch and **"/ (root)"** folder
-6. Click **"Save"**
-
-### Step 6: Access Your Live Website
-
-1. GitHub will provide you with a URL (usually takes 1-2 minutes to deploy)
-2. Your website will be available at: `https://[your-username].github.io/[repository-name]/`
-3. You can find this URL in the **"Pages"** settings section
-
-## 🔄 Updating Your Website
-
-Whenever you make changes to your website:
-
-```bash
-# Add changed files
-git add .
-
-# Commit changes
-git commit -m "Description of your changes"
-
-# Push to GitHub
-git push
-```
-
-Your changes will be live on GitHub Pages within 1-2 minutes!
-
-## 📝 Customization Tips
-
-### Change Colors
-Edit the CSS variables in `styles.css`:
-```css
-:root {
-    --primary-color: #2563eb;  /* Change this to your preferred color */
-    --primary-dark: #1e40af;
-    /* ... other colors */
-}
-```
-
-### Update Content
-- Edit `index.html` to change text, add sections, or modify content
-- All your information is in the HTML file
-
-### Add More Sections
-1. Add HTML structure in `index.html`
-2. Add corresponding styles in `styles.css`
-3. Add navigation link in the navbar
+- 🔧 **Technical Mastery**: From PLC integration to web app deployment
+- 📊 **Data Fluency**: Scenario modeling, analytics, and actionable dashboards
+- 🧠 **Systems Thinking**: Modular design, preventative strategies, and traceable workflows
+- 💬 **Narrative Clarity**: Recruiter-friendly messaging and confident professional branding
 
 ## 🛠️ Technologies Used
 
-- **HTML5** - Structure
-- **CSS3** - Styling with modern features (Grid, Flexbox, CSS Variables)
-- **JavaScript** - Interactivity and animations
-- **Google Fonts** - Inter font family
-- **GitHub Pages** - Free hosting
+- HTML, CSS, JavaScript
+- Git & GitHub for version control
+- Responsive design principles
+- Modular layout for scalability
 
-## 📱 Features
+## 🌍 Live Site
 
-- ✅ Fully responsive design (mobile, tablet, desktop)
-- ✅ Smooth scrolling navigation
-- ✅ Interactive timeline for work experience
-- ✅ Skills showcase with hover effects
-- ✅ Certificate gallery
-- ✅ Language proficiency bars
-- ✅ Contact information section
-- ✅ Modern, professional design
-- ✅ Fast loading and optimized
+Visit the deployed site: [https://KatMokoena.github.io/katleho-mokoena-portfolio](https://KatMokoena.github.io/katleho-mokoena-portfolio)
 
-## 🔒 Privacy Note
+## 📫 Contact
 
-Your contact information (email, phone) is visible on the website. If you prefer, you can:
-- Use a contact form instead
-- Use a professional email forwarding service
-- Add privacy settings
-
-## 📞 Support
-
-If you encounter any issues:
-1. Check GitHub Pages documentation: [docs.github.com/pages](https://docs.github.com/pages)
-2. Verify your repository is set to "Public"
-3. Ensure your `index.html` is in the root directory
-4. Check the "Actions" tab in GitHub for deployment status
-
-## 🎉 You're All Set!
-
-Your professional portfolio website is now live and ready to share with recruiters and employers. Simply paste the GitHub Pages URL in your job applications!
+- 📧 Email: katleho.magnolia@icloud.com
+- 🌐 LinkedIn: [linkedin.com/in/katleho-mokoena](https://linkedin.com/in/katleho-mokoena)
+- 🛠 GitHub: [github.com/KatMokoena](https://github.com/KatMokoena)
 
 ---
 
-**Built with ❤️ for your career success**
-
+> 💡 This portfolio is actively maintained and optimized. I welcome collaboration, feedback, and opportunities to empower teams through technology.
