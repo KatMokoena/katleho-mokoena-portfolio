@@ -1,18 +1,39 @@
 // Navigation Toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
+const navOverlay = document.getElementById('navOverlay');
+const navClose = document.getElementById('navClose');
 
-if (navToggle && navMenu) {
-    // Set initial text
-    navToggle.textContent = 'Hide navigation';
-    
+function openNav() {
+    if (!navMenu || !navOverlay || !navToggle) return;
+    navMenu.classList.remove('hidden');
+    navOverlay.classList.remove('hidden');
+    navToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+    if (!navMenu || !navOverlay || !navToggle) return;
+    navMenu.classList.add('hidden');
+    navOverlay.classList.add('hidden');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+}
+
+if (navToggle && navMenu && navOverlay) {
+    // start closed
+    closeNav();
+
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('hidden');
-        if (navMenu.classList.contains('hidden')) {
-            navToggle.textContent = 'Show navigation';
-        } else {
-            navToggle.textContent = 'Hide navigation';
-        }
+        const isOpen = !navMenu.classList.contains('hidden');
+        if (isOpen) closeNav();
+        else openNav();
+    });
+
+    if (navClose) navClose.addEventListener('click', closeNav);
+    navOverlay.addEventListener('click', closeNav);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeNav();
     });
 }
 
@@ -27,13 +48,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: offsetTop,
                 behavior: 'smooth'
             });
-            // Close mobile menu if open
-            if (navMenu && !navMenu.classList.contains('hidden')) {
-                navMenu.classList.add('hidden');
-                if (navToggle) {
-                    navToggle.textContent = 'Show navigation';
-                }
-            }
+            // Close menu if open
+            if (navMenu && !navMenu.classList.contains('hidden')) closeNav();
         }
     });
 });
@@ -60,8 +76,8 @@ function generatePDFResume() {
     
     // Get all the content we need
     const name = 'Katleho Magnolia Mokoena';
-    const title = 'Software Developer | Electronics Engineer Solutionist | Junior Data Analyst';
-    const email = 'katleho.magnolia@idoud.com';
+    const title = 'Solutions Engineer - Software Development • Data Analysis • Electronics Engineering';
+    const email = 'katleho.magnolia@icloud.com';
     const location = 'Johannesburg, South Africa';
     const phone = '081 538 6428';
     const linkedin = 'https://www.linkedin.com/in/katleho-mokoena-7602121a1';
@@ -97,7 +113,7 @@ function generatePDFResume() {
     // Add experience entries
     const experiences = [
         {
-            title: 'Data & Electronics Solution Analyst & Junior Software Developer',
+            title: 'Solutions Engineer - Software, Data & Engineering Solutionist',
             company: 'Mitas Corporation',
             location: 'Randburg, South Africa',
             period: '06/2024 – Present',
@@ -202,6 +218,11 @@ function generatePDFResume() {
         <div style="margin-bottom: 18px;">
             <h2 style="color: #000000; font-size: 14pt; margin-bottom: 10px; border-bottom: 1px solid #000000; padding-bottom: 3px; margin-top: 0;">EDUCATION</h2>
             <div style="margin-bottom: 12px;">
+                <h3 style="color: #333; font-size: 11pt; font-weight: bold; margin-bottom: 4px; margin-top: 0;">Amazon Software Developer</h3>
+                <p style="color: #666; font-size: 9pt; margin: 0;">Amazon Web Services (AWS) | Coursera | 11/2025 – 04/2026</p>
+                <p style="color: #333; font-size: 9pt; margin-top: 3px; margin-bottom: 0;">Specialization Certificate</p>
+            </div>
+            <div style="margin-bottom: 12px;">
                 <h3 style="color: #333; font-size: 11pt; font-weight: bold; margin-bottom: 4px; margin-top: 0;">Diploma - Electronics Engineering</h3>
                 <p style="color: #666; font-size: 9pt; margin: 0;">Vaal University of Technology | Vereeniging, South Africa | 02/2018 – 09/2022</p>
                 <p style="color: #333; font-size: 9pt; margin-top: 3px; margin-bottom: 0;">Overall Academic Percentage: 66%</p>
@@ -219,11 +240,13 @@ function generatePDFResume() {
         <div style="margin-bottom: 18px;">
             <h2 style="color: #000000; font-size: 14pt; margin-bottom: 10px; border-bottom: 1px solid #000000; padding-bottom: 3px; margin-top: 0;">TECHNICAL SKILLS</h2>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; color: #333; font-size: 9pt;">
-                <div style="margin-bottom: 4px;"><strong>Programming:</strong> C#, C++, Python, JavaScript, HTML, CSS, Angular, React, Vue.js, Node.js, Java</div>
-                <div style="margin-bottom: 4px;"><strong>Database:</strong> SQL Server, ETL/ELT, Data Analysis, Database Management</div>
-                <div style="margin-bottom: 4px;"><strong>Automation:</strong> PowerShell, PLC Programming, LS Electric PLC, LOGO</div>
+                <div style="margin-bottom: 4px;"><strong>Programming:</strong> Java, Java Programming, C#, Python, JavaScript, HTML, CSS, Full-Stack Web Development, API, OOP, File I/O</div>
+                <div style="margin-bottom: 4px;"><strong>SDLC & Testing:</strong> Systems Development, SDLC, Software Development Methodologies, Software Testing, TDD, JUnit, Data Structures</div>
+                <div style="margin-bottom: 4px;"><strong>Database:</strong> SQL Server, ETL/ELT, Data Analysis, Database Management, Data Persistence</div>
+                <div style="margin-bottom: 4px;"><strong>Cloud:</strong> Amazon Elastic Compute Cloud (EC2), Cloud Deployment</div>
+                <div style="margin-bottom: 4px;"><strong>GenAI & UX:</strong> LLM Application, Prompt Engineering, UI Design, Digital Transformation, AI Enablement</div>
+                <div style="margin-bottom: 4px;"><strong>Tools:</strong> VS Code, Git, GitHub, npm, BarTender, Microsoft Office</div>
                 <div style="margin-bottom: 4px;"><strong>Industrial:</strong> Arduino, Sensors, CAD, Pneumatics, FESTO, RFID Systems, Cognex Devices</div>
-                <div style="margin-bottom: 4px;"><strong>Tools:</strong> VS Code, Git, npm, BarTender, Microsoft Office, Live Dashboards, IDE, GitHub, MATLAB, Azure</div>
                 <div style="margin-bottom: 4px;"><strong>Soft Skills:</strong> Problem Solving, Communication, Adaptability, Critical Thinking, Time Management</div>
             </div>
         </div>
@@ -234,6 +257,11 @@ function generatePDFResume() {
         <div style="margin-bottom: 18px;">
             <h2 style="color: #000000; font-size: 14pt; margin-bottom: 10px; border-bottom: 1px solid #000000; padding-bottom: 3px; margin-top: 0;">CERTIFICATES</h2>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; color: #333; font-size: 9pt;">
+                <div style="margin-bottom: 4px;">• Application Development (Amazon Web Services (AWS) • Coursera - 04/2026)</div>
+                <div style="margin-bottom: 4px;">• Generative AI in Software Development (Amazon Web Services (AWS) • Coursera - 04/2026)</div>
+                <div style="margin-bottom: 4px;">• Full Stack Web Development (Amazon Web Services (AWS) • Coursera - 04/2026)</div>
+                <div style="margin-bottom: 4px;">• Data Structures and Algorithms (Amazon Web Services (AWS) • Coursera - 04/2026)</div>
+                <div style="margin-bottom: 4px;">• Programming with Java (Amazon Web Services (AWS) • Coursera - 04/2026)</div>
                 <div style="margin-bottom: 4px;">• PowerShell Mastery (Udemy)</div>
                 <div style="margin-bottom: 4px;">• SQL Server Certificate (Udemy)</div>
                 <div style="margin-bottom: 4px;">• Responsive Web Design (CodeCamp - 02/2025)</div>

@@ -11,11 +11,22 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <button class="nav-toggle" id="navToggle">Show navigation</button>
-            <ul class="nav-menu" id="navMenu">
+    <nav class="navbar" id="navbar" aria-label="Primary navigation">
+        <button class="nav-toggle" id="navToggle" aria-controls="navMenu" aria-expanded="false">
+            <span class="hamburger" aria-hidden="true"></span>
+            <span class="sr-only">Open menu</span>
+        </button>
+
+        <div class="nav-overlay hidden" id="navOverlay" aria-hidden="true"></div>
+
+        <div class="nav-drawer hidden" id="navMenu" role="dialog" aria-modal="true" aria-label="Menu">
+            <div class="nav-drawer-header">
+                <div class="nav-drawer-title">Menu</div>
+                <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#certifications" class="nav-link">Certificates</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Resume</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -41,7 +52,7 @@
         <div class="hero-background"></div>
         <div class="hero-content">
             <h1 class="hero-name">Katleho Mokoena</h1>
-            <p class="hero-title">Software Developer II | Electronics Engineer Solutionist | Data Analyst II<br>at <a href="https://www.mitasglobal.com/" target="_blank" rel="noopener noreferrer" style="color: #00ffff; text-decoration: none;">Mitas Corporation</a></p>
+            <p class="hero-title">Solutions Engineer - Software Development • Data Analysis• Electronics Engineering<br>at <a href="https://www.mitasglobal.com/" target="_blank" rel="noopener noreferrer" style="color: #00ffff; text-decoration: none;">Mitas Corporation</a></p>
             <div class="hero-divider"></div>
             <p class="hero-description">I uncover hidden issues through data collection, simplify presentation through software, and engineer solutions that drive smooth, scalable production and useable data.</p>
             <div class="hero-features">
@@ -51,6 +62,87 @@
             <div class="hero-divider"></div>
             <div class="hero-cta">
                 <a href="#" class="btn btn-download" id="downloadResume" download>📥 Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certifications" class="section section-alt">
+        <div class="container">
+            <h2 class="section-header">Certificates</h2>
+            <h3 class="section-title">Professional learning & credentials.</h3>
+
+            <div class="certificates-section certificates-section--standalone">
+                <h4 class="certificates-title">🏆 Certificates</h4>
+                <div class="certificates-grid">
+                    <!-- AWS / Amazon Web Services (Coursera) -->
+                    <div class="certificate-item">
+                        <div class="certificate-icon certificate-icon--logo aws-logo" aria-label="AWS logo"></div>
+                        <h4><a class="certificate-link" href="https://www.coursera.org/account/accomplishments/verify/OTVAGJEBLHEF" target="_blank" rel="noopener noreferrer">Application Development</a></h4>
+                        <div class="certificate-issuer">Amazon Web Services (AWS) • Coursera</div>
+                        <div class="certificate-date">04/2026</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon certificate-icon--logo aws-logo" aria-label="AWS logo"></div>
+                        <h4><a class="certificate-link" href="https://www.coursera.org/account/accomplishments/verify/RDL3FQRLIR85" target="_blank" rel="noopener noreferrer">Generative AI in Software Development</a></h4>
+                        <div class="certificate-issuer">Amazon Web Services (AWS) • Coursera</div>
+                        <div class="certificate-date">04/2026</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon certificate-icon--logo aws-logo" aria-label="AWS logo"></div>
+                        <h4><a class="certificate-link" href="https://www.coursera.org/account/accomplishments/verify/W84LA8SRI8X8" target="_blank" rel="noopener noreferrer">Full Stack Web Development</a></h4>
+                        <div class="certificate-issuer">Amazon Web Services (AWS) • Coursera</div>
+                        <div class="certificate-date">04/2026</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon certificate-icon--logo aws-logo" aria-label="AWS logo"></div>
+                        <h4><a class="certificate-link" href="https://www.coursera.org/account/accomplishments/verify/A3O33TO2FVLT" target="_blank" rel="noopener noreferrer">Data Structures and Algorithms</a></h4>
+                        <div class="certificate-issuer">Amazon Web Services (AWS) • Coursera</div>
+                        <div class="certificate-date">04/2026</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon certificate-icon--logo aws-logo" aria-label="AWS logo"></div>
+                        <h4><a class="certificate-link" href="https://www.coursera.org/account/accomplishments/verify/3J0FUBHS13M5?utm_product=course" target="_blank" rel="noopener noreferrer">Programming with Java</a></h4>
+                        <div class="certificate-issuer">Amazon Web Services (AWS) • Coursera</div>
+                        <div class="certificate-date">04/2026</div>
+                    </div>
+
+                    <!-- Existing certificates -->
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🏆</div>
+                        <h4>PowerShell Mastery</h4>
+                        <div class="certificate-issuer">Udemy</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🏆</div>
+                        <h4>SQL Server Certificate</h4>
+                        <div class="certificate-issuer">Udemy</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🏆</div>
+                        <h4>Responsive Web Design</h4>
+                        <div class="certificate-issuer">CodeCamp</div>
+                        <div class="certificate-date">02/2025</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🏆</div>
+                        <h4>Data Analysis with Python</h4>
+                        <div class="certificate-issuer">CodeCamp</div>
+                        <div class="certificate-date">02/2025</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🏆</div>
+                        <h4>Front End Development Libraries</h4>
+                        <div class="certificate-issuer">CodeCamp</div>
+                        <div class="certificate-date">02/2025</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-icon">🏆</div>
+                        <h4>Foundational C# with Microsoft</h4>
+                        <div class="certificate-issuer">CodeCamp</div>
+                        <div class="certificate-date">02/2025</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -108,7 +200,7 @@
                         </div>
                         <ul>
                             <li><strong>Full Name:</strong> Katleho Magnolia Mokoena</li>
-                            <li><strong>Email:</strong> katleho.magnolia@idoud.com</li>
+                            <li><strong>Email:</strong> katleho.magnolia@icloud.com</li>
                             <li><strong>Location:</strong> Johannesburg, South Africa</li>
                         </ul>
                     </div>
@@ -256,7 +348,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="experience-header">
-                            <h3>💼 Data & Electronics Solution Analyst & Software Developer II </h3>
+                            <h3>💼 Solutions Engineer - Software, Data & Engineering Solutionist</h3>
                             <span class="experience-date">06/2024 – Present</span>
                         </div>
                         <div class="experience-company">Mitas Corporation | Randburg, South Africa</div>
@@ -376,6 +468,14 @@
                         <div class="education-achievement">Overall Academic Percentage: 66%</div>
                     </div>
                     <div class="education-card">
+                        <div class="education-icon education-icon--logo aws-logo" aria-label="AWS logo"></div>
+                        <h3><a class="certificate-link" href="https://www.coursera.org/account/accomplishments/specialization/X2136D62NSBD" target="_blank" rel="noopener noreferrer">Amazon Software Developer</a></h3>
+                        <div class="education-institution">Amazon Web Services (AWS)</div>
+                        <div class="education-location">Coursera</div>
+                        <div class="education-date">11/2025 – 04/2026</div>
+                        <div class="education-achievement">Professional Specialization Certificate</div>
+                    </div>
+                    <div class="education-card">
                         <div class="education-icon">📚</div>
                         <h3>Matric</h3>
                         <div class="education-institution">Hoërskool Suiderlig</div>
@@ -387,46 +487,6 @@
                 </div>
             </div>
 
-            <!-- Certificates -->
-            <div class="certificates-section">
-                <h4 class="certificates-title">🏆 Certificates</h4>
-                <div class="certificates-grid">
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🏆</div>
-                        <h4>PowerShell Mastery</h4>
-                        <div class="certificate-issuer">Udemy</div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🏆</div>
-                        <h4>SQL Server Certificate</h4>
-                        <div class="certificate-issuer">Udemy</div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🏆</div>
-                        <h4>Responsive Web Design</h4>
-                        <div class="certificate-issuer">CodeCamp</div>
-                        <div class="certificate-date">02/2025</div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🏆</div>
-                        <h4>Data Analysis with Python</h4>
-                        <div class="certificate-issuer">CodeCamp</div>
-                        <div class="certificate-date">02/2025</div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🏆</div>
-                        <h4>Front End Development Libraries</h4>
-                        <div class="certificate-issuer">CodeCamp</div>
-                        <div class="certificate-date">02/2025</div>
-                    </div>
-                    <div class="certificate-item">
-                        <div class="certificate-icon">🏆</div>
-                        <h4>Foundational C# with Microsoft</h4>
-                        <div class="certificate-issuer">CodeCamp</div>
-                        <div class="certificate-date">02/2025</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -441,15 +501,22 @@
                     <div class="skills-tags">
                         <span class="skill-tag">C#</span>
                         <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Object Oriented Programming (OOP)</span>
+                        <span class="skill-tag">File I/O</span>
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">HTML</span>
                         <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Full-Stack Web Development</span>
                         <span class="skill-tag">Angular</span>
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">Vue.js</span>
                         <span class="skill-tag">Node.js</span>
                         <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Java Programming</span>
+                        <span class="skill-tag">Application Programming Interface (API)</span>
+                        <span class="skill-tag">Software Design</span>
+                        <span class="skill-tag">Maintainability</span>
                     </div>
                 </div>
                 <div class="skills-category">
@@ -462,6 +529,7 @@
                         <span class="skill-tag">Data Visualization</span>
                         <span class="skill-tag">Statistics & Math</span>
                         <span class="skill-tag">Data Cleaning</span>
+                        <span class="skill-tag">Data Persistence</span>
                     </div>
                 </div>
                 <div class="skills-category">
@@ -472,6 +540,30 @@
                         <span class="skill-tag">PLC Programming</span>
                         <span class="skill-tag">LS Electric PLC</span>
                         <span class="skill-tag">LOGO</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="skills-category-title">🧭 SDLC, Testing & Engineering Practices</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Systems Development</span>
+                        <span class="skill-tag">Software Development Life Cycle</span>
+                        <span class="skill-tag">Software Development Methodologies</span>
+                        <span class="skill-tag">Software Testing</span>
+                        <span class="skill-tag">Test Driven Development (TDD)</span>
+                        <span class="skill-tag">JUnit</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="skills-category-title">🤖 Generative AI & Product Design</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">LLM Application</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">User Interface (UI) Design</span>
+                        <span class="skill-tag">Digital Transformation</span>
+                        <span class="skill-tag">Software Development Tools</span>
+                        <span class="skill-tag">AI Enablement</span>
                     </div>
                 </div>
                 <div class="skills-category">
@@ -499,6 +591,8 @@
                         <span class="skill-tag">GitHub</span>
                         <span class="skill-tag">MATLAB</span>
                         <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Amazon Elastic Compute Cloud</span>
+                        <span class="skill-tag">Cloud Deployment</span>
                         <span class="skill-tag">AI Enthusiast</span>
                         <span class="skill-tag">Prompt Coding</span>
                     </div>
@@ -643,7 +737,7 @@
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">6</div>
+                        <div class="stat-number">11</div>
                     <div class="stat-label">Certificates</div>
                 </div>
                 <div class="stat-item">
@@ -676,7 +770,7 @@
                     </div>
                     <div class="contact-item">
                         <h4>📧 Email Me At</h4>
-                        <p><a href="mailto:katleho.magnolia@idoud.com?subject=Job Opportunity">katleho.magnolia@idoud.com</a></p>
+                        <p><a href="mailto:katleho.magnolia@icloud.com?subject=Job Opportunity">katleho.magnolia@icloud.com</a></p>
                     </div>
                     <div class="contact-item">
                         <h4>📱 Call Me At</h4>
