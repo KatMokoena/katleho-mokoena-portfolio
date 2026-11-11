@@ -17,3 +17,6 @@ desktop.ini
 *.tmp
 *.temp
 
+# React app
+site/node_modules/
+site/dist/
